@@ -1,0 +1,118 @@
+*{
+	margin:0;
+	padding:0;
+}
+ul,ol,li{
+	list-style:none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:18px;
+	font-weight: 100;
+}
+i,em{
+	font-style: normal;
+}
+img{
+	display:block;
+	border:0;
+}
+body{
+	background:url(../images/background_1.png)no-repeat;
+}
+#header_1{
+	height:124px;
+	width:100%;
+	background:url(../images/ecshop-logo.png)no-repeat bottom center;
+	background-size:248px 65px;
+}
+#header_1 h1{
+	padding-top:43px;
+	padding-left:43px;	
+}
+#center_1{
+	width:442px;
+	height:300px;
+	background:#ccc;
+	margin:0 auto;
+	margin-top:43px;
+	padding-top:50px;
+}
+#center_1 p{
+	width:300px;
+	height:50px;
+	border:1px solid #ccc;
+	margin:0 auto;
+	background:#fff;
+}
+#center_1 p span{
+	font-size:30px;
+	text-align:center;
+	line-height:50px;
+	color:#888;
+	display:block;
+	width:50px;
+	height:50px;
+	float:left;
+}
+#center_1 input{
+	width:250px;
+	height:50px;
+	border:none;
+	float:right;
+}
+#center_1 input:focus{
+	outline:0 !important;
+}
+#inp3{
+	width:150px!important;
+	float:left!important;
+	position:relative;
+}
+#b3{
+	display:block;
+	float:right;
+	font-size:24px;
+	text-align:center;
+	line-height:50px;
+	width:100px;
+	height:50px;
+	background:url(../images/bgb.PNG)no-repeat;
+}
+#btn{
+	width:300px;
+	height:53px;
+	color:#fff;
+	font-size:18px;
+	background:#fc7878;
+	border:none;
+	border-radius:5px;
+	margin-top:25px;
+	margin-left:71px;
+}
+#box{
+	display:block;
+	width:300px;
+	height:40px;
+	margin:0 auto;
+}
+#box .tosave{
+	font-size:12px;
+	line-height:40px;
+	color:#888;
+	text-decoration:none;
+	
+}
+#box_c{
+	width:15px!important;
+	float:left!important;
+	height:43px!important;
+	margin-right:8px;
+
+}
+#box .psw{
+	color:blue;
+	margin-left:23px;
+}
+#box .psw:hover{
+	text-decoration: underline;
+}

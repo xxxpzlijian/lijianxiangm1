@@ -1,0 +1,187 @@
+*{
+	margin:0;
+	padding:0;
+}
+ul,ol,li{
+	list-style:none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:18px;
+	font-weight: 100;
+}
+i,em{
+	font-style: normal;
+}
+img{
+	display:block;
+	border:0;
+}
+a,u{
+	text-decoration: none;
+}
+b,strong{
+	font-weight:100;
+}
+body{
+	background:url(../images/bg11.png);
+}
+#head_1{
+	width:1220px;
+	height:40px;
+	margin: 0 auto;
+	margin-top:10px;
+	border-bottom:1px solid #ccc;
+}
+#a1{
+	color:#000;
+	padding-left:20px;
+	font-size:18px;
+	line-height:40px;
+
+}
+#a2{
+	float:right;
+	padding-top:8px;
+	color:#000;
+	margin-right:680px;
+	font-size:18px;
+	line-height:40px;
+}
+#sp{
+	color:#000;
+	font-size:18px;
+	line-height:40px;
+}
+.p1{
+	margin-top:8px;
+	float:right;
+	color:#fff;
+	font-size:14px;
+	width:120px;
+	line-height:26px;
+	margin-right:30px;
+	text-align:center;
+	height:26px;
+	background:#c43926;
+	border-radius:4px;
+}
+#inp{
+	width:1220px;
+	height:40px;
+	border:1px solid #666;
+	margin:0 auto;
+	margin-top:10px;
+	background:#ccc url(../images/icon_s.gif)no-repeat 10px center;
+}
+.sele1{
+	width:158px;
+	height:20px;
+	margin-top:10px;
+	margin-left:40px;
+}
+.sele2{
+	width:105px;
+	height:20px;
+	margin-top:10px;
+}
+.sele3{
+	width:72px;
+	height:20px;
+	margin-top:10px;
+}
+.sele4{
+	width:48px;
+	height:20px;
+	margin-top:10;
+}
+#inp span{
+	font-size:12px;
+	color:#666;
+}
+.gjz{
+	width:105px;
+	height:16px;
+	margin-top:11px;
+}
+.s{
+	display:block;
+	width:61px;
+	height:20px;
+	font-size:12px;
+	color:#fff;
+	background:#c43926;
+	border-radius:3px;
+	text-align:center;
+	line-height:20px;
+	float:right;
+	margin-top:11px;
+	margin-right:550px;
+}
+#tab{
+	width:1220px;
+	height:900px;
+	background:#fff;
+	margin:0 auto;
+}
+.sur{
+	margin-left:10px;
+	margin-top:10px;
+	float:left;
+}
+.btn1{
+	float:left;
+	margin-top:10px;
+	margin-left:5px;
+	width:40px;
+	font-size:12px;
+	text-align:center;
+	line-height:20px;
+	height:20px;
+	border-radius:3px;
+	background:#c43926;
+}
+.btn1 a{
+	color:#fff;
+}
+#footer_1{
+	background:#f3f3f3;
+	width:1220px;
+	margin:0 auto;
+	margin-top:40px;
+	height:64px;
+	border:1px solid #ddd;
+	padding-top:15px;
+}
+#footer_1 p{
+	color:#9cacaf;
+	font-size:12px;
+	line-height:20px;
+	text-align:center;
+}
+#tab{
+	padding-top:20px;
+}
+#tab table{
+	margin-left:55px;
+}
+td{
+	width:120px;
+	height:30px;
+	line-height:30px;
+	border:1px solid #000;
+	text-align:center;
+}
+.cen img{
+	margin-left:47px;
+	margin-top:5px;
+}
+#ym{
+	text-align:right;
+	margin-right:95px;
+}
+.ceng img{
+	margin-left:13px!important;
+	margin-top:2px!important;
+	float:left;
+}
+

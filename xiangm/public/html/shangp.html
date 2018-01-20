@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/shangp.css">
+	<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+	<script src="../js/jquery1.js"></script>
+</head>
+<body>
+	<div id="head_1">
+		<a id="a1" href="#">ECSHOP管理中心</a>
+		<span id="sp"> - 商品列表</span>
+		<p class="p1"><i class="iconfont icon-jiahao"></i>添加新商品</p>
+		<a id="a2"><img src="../images/jnsy.png"></a>
+	</div>
+	<div id="inp">
+		<select class="sele1">
+			<option>shif</option>
+		</select>
+		<select class="sele2">
+			<option>shif</option>
+		</select>
+		<select class="sele3">
+			<option>shif</option>
+		</select>
+		<select class="sele4">
+			<option>shif</option>
+		</select>
+		<span>关键字</span>
+		<input type="text" name="" class="gjz"> 
+		<a class="s" href="#">搜索</a>
+	</div>
+	<div id="tab">
+		<table cellspacing="0" border="1">
+			<td>编号</td>
+			<td>名称</td>
+			<td>是否过期</td>
+			<td>货号</td>
+			<td>是否翻新</td>
+			<td>售价</td>
+			<td>无货</td>
+			<td>销量</td>
+			<td>操作</td>
+			
+		</table>
+		<div id="ym">
+			总计 ： 
+			<span class="zongji">0&nbsp;&nbsp;</span>
+			个记录分为
+			<span class="meiye">3&nbsp;&nbsp;</span>
+			页当前第
+			<span class="dijiye">1</span>
+			页，每页
+			<input type="text" name="" size="3" class="tiaos" value="5" >
+			<span id="pagelink">
+				<a href="javascript:swy(1)">首页</a>
+				<a href="javascript:fanye(-1)">上一页</a>
+				<a href="javascript:fanye(1)">下一页</a>
+				<a href="javascript:swy()">最末页</a>
+				<select class="yeshu" onchange="change()">
+					
+				</select>
+			</span>
+		</div>
+	</div>
+	<select class="sur">
+		<option>请选择</option>
+		<option>回收站</option>
+		<option>上架</option>
+		<option>下架</option>
+		<option>精品</option>
+		<option>取消精品</option>
+		<option>热销</option>
+		<option>取消热销</option>
+	</select>
+	<p class="btn1"><a href="">确定</a></p>
+	<div id="footer_1">
+		<p>共执行 7 个查询，用时 0.023063 秒，Gzip 已禁用内存占用 3.555 MB</p>
+        <p>版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利.</p>
+	</div>
+</body>
+<script>
+	function change(){
+	  $(".dijiye").html($(".yeshu").find("option:selected").text()||1)
+	//   console.log( $(".dijiye").html($(".yeshu").find("option:selected").text()))
+	  lij();
+	}
+	function swy(num){
+	  $(".dijiye").html(num||$(".yeshu option:last").val())
+	  console.log($(".dijiye").html())
+	  lij()
+	}
+	function fanye(num){
+	  if($(".dijiye").html()*1+num>$(".yeshu option:last").val()){
+	    alert("最后一页")
+	  }else if($(".dijiye").html()*1+num==0){
+	            alert("第一页")
+	    }else{
+	      $(".dijiye").html($(".dijiye").html()*1+num)
+	     // console.log($(".dijiye").html())
+	      lij()
+	    }
+	}
+
+
+
+
+
+	$(".tiaos").keydown(function(e){
+		if(e.keyCode == 13){
+			var e=event.srcElement;
+			$(this).html($(this).val());
+			lij();
+		}
+	})
+	function lij(nn){
+		$.ajax({
+			url: "/ajaxfeny",
+			type : "get",
+			data :{
+				condition :0,
+				pageNO : $(".dijiye").html(),
+				perPageCnt : $(".tiaos").val() 
+			},
+			success : function(res){
+				console.log(res);
+				var data = res.data;
+				var count = res.total;
+				// console.log(count)
+				var len = data.length;
+				var allpage = Number(Math.ceil(count / $(".tiaos").val() ))
+				$(".meiye").html(allpage)
+				var yezi = res.pageNO;//第几页
+				$(".zongji").html(count)
+				$(".yeshu option").remove()
+				for(j=0;j<allpage;j++){
+                    var s= j+1;
+                    var slt = 
+                    `<option value="${s}" >${s}</option>`
+                    $(".yeshu").append(slt)
+                    $(".yeshu option[value="+yezi+"]").attr("selected",true);
+                }
+				$(".trr").remove()
+				
+				for(var i = 0 ; i < len ; i++){
+					
+					var td = `<tr class="trr">
+                        <td><input type="checkbox"/></td>
+                        <td>${data[i].goodsName}</td>
+                        <td class="cen"><img src="../images/duihao.PNG" alt="" /></td>
+                        <td class="cen">${data[i].goodsNumber}</td>
+                        <td class="cen"><img src="../images/no.gif" alt="" /></td>
+                        <td class="cen">${data[i].xiaoliang}</td>
+                        <td class="cen"><img src="../images/no.gif" alt="" /></td>
+                        <td class="cen">${data[i].price}</td>
+                         <td class="cen ceng">
+                         	<img src="../images/icon1.gif" alt="" />
+                         	<img src="../images/icon2.gif" alt="" />
+                         	<img id="delete" src="../images/icon3.gif" alt="" />
+
+                         	</td>
+                         	</tr>`;
+                    $("#tab table").append(td);
+                        
+				}
+			}
+		})
+	}
+	lij();
+	
+</script>
+</html>
+

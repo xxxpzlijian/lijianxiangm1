@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/fenglie.css">
+	<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+	<script type="text/javascript" src="../js/jquery1.js"></script>
+</head>
+<body>
+	<div id="head_1">
+		<a id="a1" href="#">ECSHOP管理中心</a>
+		<span id="sp"> - 商品列表</span>
+		<p class="p1"><i class="iconfont icon-jiahao"></i>添加新商品</p>
+		<a id="a2"><img src="../images/jnsy.png"></a>
+	</div>
+	<div id="main">
+		<div class="main_1">
+			<ul>
+				<li class="li1"><a href="#">通用信息</a></li>
+				<li><a href="#">详细描述</a></li>
+				<li><a href="#">其他信息</a></li>
+				<li><a href="#">商品属性</a></li>
+				<li><a href="#">商品相册</a></li>
+				<li><a href="#">关联商品</a></li>
+				<li><a href="#">配件</a></li>
+				<li><a href="#">关联文章</a></li>
+			</ul>
+		</div>
+		<div class="xuan kk">
+			<p id="ppx">商品名称:</p>
+			<h6><input id="shangname" style="width:195px;height:22px"  type="text" name="">
+				<select>
+					<option>字体样式</option>
+					<option>加粗</option>
+					<option>斜体</option>
+					<option>下划</option>
+					<option>删除线</option>
+				</select>
+				*
+			</h6>
+			<p id="ppx">商品货号:</p>
+			<h6><input id="shangnum" style="width:135px" type="text" name=""></h6>
+			<p id="ppx">商品分类:</p>
+			<h6>
+				<select style="width:150px">
+					<option>裤子</option>
+					<option>上衣</option>
+					<option>袜子</option>
+					<option>棉袄</option>
+					<option>短袖</option>
+					<option>化妆品</option>
+					<option>口红</option>
+					<option>假发</option>
+					<option>皮衣</option>
+					<option>内衣</option>
+				</select>
+				<span>添加分类</span>
+			</h6>
+			<p id="ppx">扩展分类:</p>
+			<h6><a href="#">添加分类</a></h6>
+			<p id="ppx">商品品牌:</p>
+			<h6>
+				<select id="fenclass" style="width:120px">
+					<option>上衣</option>
+					<option>袜子</option>
+					<option>棉袄</option>
+					<option>短袖</option>
+					<option>化妆品</option>
+					<option>口红</option>
+					<option>假发</option>
+					<option>皮衣</option>
+					<option>内衣</option>
+				</select>
+				<span style="margin-right:600px;">添加分类</span>
+			</h6>
+			<p id="ppx">本店有售:</p>
+			<h6>
+				<input type="text" name="" value="0">
+				<input style="height:26px" type="button" name="" value="按市场价格计算">
+			</h6>
+			<p id="ppx">会员价格:</p>
+			<h6>
+				注册用户<input style="width:60px" type="text" value="-1">
+				代销用户<input style="width:60px" type="text" value="-1">
+				vip <input style="width:60px" type="text" name="" value="-1">
+			</h6>
+			<p id="ppx">商品优惠价格:</p>
+			<h6>
+				优惠数量<input style="width:60px" type="text">
+				优惠价格<input style="width:60px" type="text">
+			</h6>
+			<p id="ppx">市场售价:</p>
+			<h6>
+				<input id="jiage" type="text" name="" value="0">
+				<span style="margin-right:555px">取整数</span>
+			</h6>
+			<p id="ppx">销量:</p>
+			<h6>
+				<input id="xiaoliang" type="text" name="" value="-1">
+			</h6>
+			<p id="ppx">积分购买金额:</p>
+			<h6>
+				<input type="text" name="" value="0">
+			</h6>
+			<h4>
+				<span id="spa1">确定</span>
+				<b>重置</b>
+			</h4>
+		</div>
+		<div class="xuan">
+			<textarea></textarea>
+			<h4>
+				<span>确定</span>
+				<b>重置</b>
+			</h4>
+		</div>
+		<div class="xuan">
+			<p id="ppx">商品重量:</p>
+			<h6>
+				<input type="text" name="" >
+				<select>
+					<option>1千克</option>
+					<option>2千克</option>
+					<option>3千克</option>
+					<option>4千克</option>
+				</select>
+			</h6>
+			<p id="ppx">商品库存数量:</p>
+			<h6>
+				<input type="text" name="">
+			</h6>
+			<p id="ppx">库存警告数量:</p>
+			<h6>
+				<input type="text" name="">
+			</h6>
+			<p id="ppx">加入推荐:</p>
+			<h6>
+				<input style="margin-left:10px" type="checkbox" name=""> 精品
+				<input style="margin-left:10px" type="checkbox" name=""> 新品
+				<input style="margin-left:10px" type="checkbox" name=""> 热销
+			</h6>
+			<p id="ppx">上架:</p>
+			<h6>
+				<input type="checkbox" name="" checked="checked">
+				打勾表示允许销售，否则不可以销售
+			</h6>
+			<p id="ppx">赠品:</p>
+			<h6>
+				<input type="checkbox" name="" checked="checked">
+				打勾表示允许附赠，否则不可以
+			</h6>
+			<p id="ppx">能不能作为普通商品出售:</p>
+			<h6>
+				<input type="checkbox" name="" checked="checked">
+				打勾表示允许可以出售，否则不可以
+			</h6>
+			<p id="ppx">商品关键词:</p>
+			<h6>
+				<input type="text" name="">
+				用空格隔开				
+			</h6>
+			<p id="ppx">商品简单描述:</p>
+			<h6>
+				<textarea  style="width:260px;height:50px;float:left;margin-top:0"></textarea>
+							
+			</h6>
+			<p id="ppx">备注:</p>
+			<h6>
+				<textarea  style="width:260px;height:50px;float:left;margin-top:20px"></textarea>
+							
+			</h6>
+			<h4>
+				<span>确定</span>
+				<b>重置</b>
+			</h4>
+		</div>
+		<div class="xuan"> 
+			<p id="ppx">商品类型:</p>
+			<h6>
+				<select style="width:180px"> 
+					<option>请选择商品类型</option>
+					<option>手机</option>
+					<option>电脑</option>
+					<option>数码</option>
+					<option>家电</option>
+				</select>
+							
+			</h6>
+			<h4>
+				<span>确定</span>
+				<b>重置</b>
+			</h4>
+		</div>
+
+		<div class="xuan">5</div>
+		<div class="xuan">6</div>
+		<div class="xuan">7</div>
+		<div class="xuan">8</div>
+	</div>
+	<div id="footer_1">
+		<p>共执行 7 个查询，用时 0.023063 秒，Gzip 已禁用内存占用 3.555 MB</p>
+        <p>版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利.</p>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	$(".main_1 ul li").eq(0).css("background","#fff")
+	$(".main_1 ul li").click(function(){
+		$(".main_1 ul li").css("background","");
+		$(".main_1 ul li").eq($(this).index()).css("background","#fff").siblings().css("background","")
+		$(".xuan").css("display","none");
+		$(".xuan").eq($(this).index()).css("display","block");
+	})
+	$("#spa1").click(function(){
+		$.ajax({
+			url : "/api/shangping",
+			type : "post",
+			data : {
+				goodsName : $("#shangname").val(),
+				goodsNumber : $("#shangnum").val(),
+				xiaoliang : $("#xiaoliang").val(),
+				price : $("#jiage").val()
+			},
+			success : function(res){
+				if(res.code == 1){
+					alert("添加成功")
+				}else{
+					alert("添加失败")
+				}
+			}
+		})
+	})
+	
+</script>

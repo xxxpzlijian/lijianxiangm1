@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+</head>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style1.css">
+	<link rel="stylesheet" type="text/css" href="/iconfont/iconfont.css">
+	<script type="text/javascript" src="/js/jquery1.js"></script>
+<body>
+	<div id="header_1">
+		<h1><img src="/images/shopex.png"></h1>
+	</div>
+	<div id="center_1">
+		<p><span class="iconfont icon-iconset0202"></span><input type="text" name="" placeholder="用户名" id="username"></p>
+		<p><span class="iconfont icon-12quanxianguanli"></span><input type="password" name="" placeholder="密码" id="psw"></p>
+		<p><span class="iconfont icon-wenhao"></span><input type="text" name="" placeholder="验证码" id="inp3"><b id="b3"></b></p>
+		<button id="btn" onclick="login()">登录</button>
+		<span id="box">
+			<input type="checkbox" id="box_c" name="">
+			<a href="#" class="tosave">保存登录信息</a>
+			<a href="#" class="tosave psw">忘记密码？</a>
+			<a href="#" class="tosave psw">去店铺首页>></a>
+		</span>
+	</div>
+</body>
+<script type="text/javascript">
+	function login(){
+		$.ajax({
+			url : "/api/login4ajax",
+			type : "post",
+			data :{
+				username : $("#username").val(),
+				psw : $("#psw").val(),
+			},
+			success : function(res){
+				console.log(res);
+				if(res.code == 1){
+					location.href = "/loginAction"
+				}else{
+					alert(res.message);
+				}
+			}
+		})
+	}
+	$("#b3").click(function(){
+		var arr = ["a","b","c","d","e","f","g",1,2,3,4,5,6,7,8,9,0];
+		var num = "";
+		for(var i = 0 ; i < 4 ; i++){
+			var str = Math.floor(Math.random()*17);
+			num += arr[str];
+		}
+		$("#b3").html(num);
+	})
+</script>
+</html>
